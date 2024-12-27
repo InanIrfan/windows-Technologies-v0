@@ -74,3 +74,44 @@ function applyLightMode() {
   themeDiv.style.backgroundColor = 'black'; // Black div background for light mode
   localStorage.setItem('theme', 'light'); // Save theme preference
 }
+
+// names services
+const text = document.querySelector(".sec-text");
+
+const textLoad = () => {
+  setTimeout(() => {
+    text.textContent = "Mobiles Repairs";
+  }, 0);
+  setTimeout(() => {
+    text.textContent = "Cpu Repairs";
+  }, 4000);
+  setTimeout(() => {
+    text.textContent = "CCTV Cameras Installation";
+  }, 8000); //1s = 1000 milliseconds
+}
+
+textLoad();
+setInterval(textLoad, 12000);
+
+//image code here
+document.addEventListener("DOMContentLoaded", () => {
+  const image = document.querySelector(".main-img");
+
+  const handleAnimation = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        image.classList.add("act");
+      } else {
+        image.classList.remove("act");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleAnimation, {
+    threshold: 0.1, // Trigger when 10% of the element is visible
+  });
+
+  // Observe the target element
+  observer.observe(image);
+});
+
