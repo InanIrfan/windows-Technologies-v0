@@ -174,11 +174,13 @@ body::-webkit-scrollbar{
   background: #e1eaec;
   color: #4a6470;
 }
+/*landing home style code */
 #home{
   position: relative;
   display: flex;
   flex-direction: row;
 }
+/*landing page title here*/
 .logo-title{
   position: relative;
   top: 100px;
@@ -210,6 +212,7 @@ body::-webkit-scrollbar{
   word-wrap: break-word;
   line-height: 41px;
 }
+/*second title*/
 #min-title{
   /*position: relative;*/
   /*top: 67px;*/
@@ -225,6 +228,7 @@ body::-webkit-scrollbar{
   font-weight: bold;
   /*word-wrap: break-word;*/
 }
+/*landing page buttons*/
 .main-buttons{
   position: relative;
   width: 600px;
@@ -251,6 +255,7 @@ body::-webkit-scrollbar{
 .main-button a{
   color: #fff;
 }
+/*main image style code*/
 .text .picture-main{
   position: relative;
   top: 79px;
@@ -282,7 +287,7 @@ body::-webkit-scrollbar{
   opacity: 1;
   margin-right: 25px;
 }
-/*names changes style code*/
+/*services names changes style code*/
 /*.names{*/
 /*  position: relative;*/
 /*  left: 10px;*/
@@ -319,6 +324,7 @@ body::-webkit-scrollbar{
     left: 0%;
   }
 }
+/*landing home page wave shape style code*/
 .custom-shape-divider-top-1735303245 {
   position: absolute;
   top: 0;
