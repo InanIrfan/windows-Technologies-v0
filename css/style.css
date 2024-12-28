@@ -163,7 +163,7 @@ body::-webkit-scrollbar{
   position: relative;
   top: 5px;
   width: 100%;
-  height: 800px;
+  height: 600px;
   /*display: flex;*/
   /*justify-content: center;*/
   /*align-items: center;*/
@@ -223,9 +223,9 @@ body::-webkit-scrollbar{
 .min-para{
   position: relative;
   left: 12px;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 20px;
-  font-weight: bold;
+  font-weight: normal;
   /*word-wrap: break-word;*/
 }
 /*landing page buttons*/
@@ -265,7 +265,7 @@ body::-webkit-scrollbar{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #d7f0e9;
+  background: #6f7fff;
   /*z-index: 1000;*/
   border-radius: 72% 28% 54% 46% / 80% 54% 46% 20%  ;
   overflow: hidden;
@@ -278,7 +278,7 @@ body::-webkit-scrollbar{
   width: 400px;
   height: 400px;
   background-size: cover;
-  filter:  drop-shadow(5px 5px 20px black);
+  filter:  drop-shadow(0px 5px 20px black);
   opacity: 0.1;
   transition: all 3s ease;
 }
@@ -345,4 +345,62 @@ body::-webkit-scrollbar{
 .custom-shape-divider-top-1735303245 .shape-fill {
   fill: #FFFFFF;
 }
-
+/*product style code here*/
+#products{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+  /*flex-wrap: wrap;*/
+  background: #1f272d;
+}
+.product{
+  position: relative;
+  /*top: 5px;*/
+  margin-top: 2px;
+  /*left: 5px;*/
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.desktop{
+  position: relative;
+  /*margin-left: 20px ;*/
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: 400px;
+  /*background: #1f272d;*/
+}
+.desktop-text{
+  position: relative;
+  /*right: 15px;*/
+  width: 700px;
+  height: 250px;
+  margin-top: 40px;
+  margin-left: 30px;
+  color: #000;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: justify;
+  /*background: #4070F4;*/
+}
+.desktop-img{
+  position: relative;
+  top: 25px;
+  /*left: 50px;*/
+  width: 350px;
+  height: 370px;
+}
+.desktop-cpu{
+  position: relative;
+  top: 40px;
+  right: 80px;
+  width: 300px;
+  height: 300px;
+  /*background: #4070F4;*/
+}
