@@ -368,6 +368,7 @@ h6{
   font-size: 45px;
   font-weight: 600;
   color: #000000;
+  margin-top: 10px;
 }
 .product{
   position: relative;
@@ -488,6 +489,12 @@ h6{
 #services{
   height: fit-content;
 }
+.services-text{
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  color: #000000;
+}
 .service{
   position: relative;
   display: flex;
@@ -548,13 +555,41 @@ h6{
 /*thumbnail text style code*/
 .thumb-title{
   position: relative;
-  display: flex;
-  justify-content: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
   align-items: center;
+  text-align: center;
   top: 11px;
-  left: 10px;
-  width: 200px;
+  /*left: 10px;*/
+  width: 250px;
   height: 50px;
   color: #000000;
   font-size: 25px;
+}
+.cctv-camera{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+.cctv-camera-thumb{
+  position: relative;
+  width: 370px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #ffffff;
+  margin: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.cctv-camera-thumb:hover{
+  transform: translateY(-10px);
+}
+.cctv-camera-tag{
+  position: relative;
+  margin-bottom: 20px;
 }
