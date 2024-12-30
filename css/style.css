@@ -258,6 +258,9 @@ body::-webkit-scrollbar{
   text-decoration: none;
   cursor: pointer;
 }
+.main-button:active{
+    background: #4070F4;
+}
 .main-button a{
   color: #fff;
 }
@@ -668,4 +671,103 @@ h6{
   color: #ffffff;
   background: #000000;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.card-button:hover{
+  background: #4959b9;
+}
+.card-button:active{
+  background: #4070F4;
+}
+/*security style code*/
+.security{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+.security-card{
+  position: relative;
+  /*left: 20px;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  /*margin-top: 20px;*/
+  /*margin-left: 30px;*/
+  /*margin-right: 30px;*/
+  color: #000;
+  background: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: justify;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.security-card:hover{
+  transform: scale(1.1);
+}
+.security-card-img{
+  position: relative;
+  margin: 10px;
+  width: 230px;
+  height: 230px;
+  /*filter:  drop-shadow(2px 2px 1px black);*/
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  background: #4a6470;
+}
+.security-card-img, #secure{
+  width: 230px;
+  height: 210px;
+}
+.security-card-title{
+  position: relative;
+  text-align: center;
+  color: #000000;
+  font-weight: 600;
+  font-size: 25px;
+}
+.security-card-text{
+  position: relative;
+  text-align: center;
+  color: #000000;
+  font-size: 18px;
+  font-weight: normal;
+}
+.security-card-price{
+  position: relative;
+  text-align: center;
+  color: #4959b9;
+}
+.security-card-button{
+  position: relative;
+  text-align: center;
+  border: none;
+  width: 200px;
+  height: 50px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  /*margin: 10px;*/
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+}
+.security-card-button:hover{
+  background: #4959b9;
 }
