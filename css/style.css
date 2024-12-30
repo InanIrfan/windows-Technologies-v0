@@ -250,7 +250,7 @@ body::-webkit-scrollbar{
   border: none;
   outline: none;
   border-radius: 55px;
-  box-shadow: 0 0 10px  rgba(0,0,0,0.2);
+  box-shadow: 0 10px 10px  rgba(0,0,0,0.2);
 }
 .main-button:hover{
   background: #4959b9;
@@ -922,4 +922,161 @@ h6{
   .timeline ul li:hover::before {
     background-color: #1f272d;
   }
+}
+/*contact code style here*/
+/*#contact{*/
+/*  position: relative;*/
+/*  display: flex;*/
+/*  width: 100%;*/
+/*  height: fit-content;*/
+/*}*/
+.contacts{
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  width: 100%;
+  background: #000000;
+  padding: 10px;
+}
+/*.addres{*/
+/*  position: relative;*/
+/*  top: 5px;*/
+/*  left: 5px;*/
+/*  !*display: flex;*!*/
+/*  width: 500px;*/
+/*  height: 500px;*/
+/*  background: #ffffff;*/
+/*  !*color: #000000;*!*/
+/*  !*font-size: 20px;*!*/
+/*  !*font-weight: 600;*!*/
+/*  margin: 19px;*/
+/*  border-radius: 10px;*/
+/*  overflow: hidden;*/
+/*  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);*/
+/*  transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+/*  cursor: pointer;*/
+/*}*/
+.contact-adders{
+  position: relative;
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*flex-wrap: wrap;*/
+  top: 5px;
+  left: 5px;
+  width: 360px;
+  height: 650px;
+  background: #ffffff;
+  margin: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  /*line-height: 20px;*/
+}
+.contact-adders ul .contact-text{
+  list-style: none;
+  position: relative;
+  display: flex;
+  text-align: justify;
+  color: #000000;
+  font-weight: normal;
+  font-size: 18px;
+  width: 100%;
+  padding-left: 15px;
+  line-height: 20px;
+}
+.contact-adders ul .title{
+  font-size: 25px;
+  font-weight: bold;
+}
+/*.contact-text-desc{*/
+/*  !*position: relative;*!*/
+/*  width: 100%;*/
+
+/*}*/
+.contact-button{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+
+}
+.contact-button button{
+  position: relative;
+  top: 90px;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  background: #000000;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.contact-button button:hover{
+  background: #4959b9;
+}
+.contact-location{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 5px;
+  left: 5px;
+  width: 890px;
+  height: 650px;
+  background: #ffffff;
+  margin: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.location{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*top: 5px;*/
+  /*left: 5px;*/margin: 2px;
+  width: 870px;
+  height: 340px;
+  border-radius: 20px;
+  background: #000000;
+  overflow: hidden;
+}
+.message{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 5px;
+  left: 5px;
+  width: 870px;
+  height: 500px;
+  background: #000000;
+  margin: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /*cursor: pointer;*/
 }
