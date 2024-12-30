@@ -580,16 +580,73 @@ h6{
   position: relative;
   width: 370px;
   height: 400px;
+  display: flex;
+  background: #ffffff;
+  color: #000000;
+  /*font-size: 20px;*/
+  font-weight: 600;
   overflow: hidden;
   border-radius: 10px;
-  background: #ffffff;
   margin: 10px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 .cctv-camera-thumb:hover{
   transform: translateY(-10px);
 }
-.cctv-camera-tag{
-  position: relative;
-  margin-bottom: 20px;
+.cctv-camera-tag {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4959b9;
+  /*background: #ffffff;*/
+  /*margin-bottom: 20px;*/
+  right: 10px;
+}
+.tag-text{
+  position: absolute;
+  right: 10px;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*flex-wrap: wrap;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 10px;
+  /*z-index: 100;*/
+}
+.cctv-card-title{
+  position: absolute;
+  top: 11px;
+  left: 20px;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*color: #000000;*/
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.cctv-text{
+  position: absolute;
+  top: 7px;
+  left: -180px;
+  /*left: 20px;*/
+  /*right: 1px;*/
+  /*color: #000000;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  line-height: 20px;
+  font-size: 20px;
+}
+.bi-check-lg{
+  color: #4959b9;
 }
