@@ -1057,7 +1057,7 @@ h6{
   /*top: 5px;*/
   /*left: 5px;*/margin: 2px;
   width: 870px;
-  height: 340px;
+  height: 270px;
   border-radius: 20px;
   background: #000000;
   overflow: hidden;
@@ -1066,17 +1066,112 @@ h6{
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  top: 5px;
-  left: 5px;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*flex-wrap: wrap;*/
+  /*top: 5px;*/
+  /*left: 5px;*/
   width: 870px;
   height: 500px;
   background: #000000;
-  margin: 15px;
+  margin: 12px;
   border-radius: 10px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   /*cursor: pointer;*/
 }
+.form-title{
+  /*position: relative;*/
+  /*display: flex;*/
+  /*top: 50px;*/
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: #ffffff;
+}
+.form{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  top: 0;
+}
+.input-wrapper{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  margin: 1px;
+  width: 860px;
+  height: 100px;
+}
+.form-input{
+  position: relative;
+  /*top: 25px;*/
+  /*left: 5px;*/
+  display: flex;
+  width: 420px;
+  height: 60px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  /*margin-top: 10px;*/
+  margin: 2px;
+  /*margin-bottom: 15px;*/
+  border: none;
+  /*overflow: hidden;*/
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.form-message{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*top: 5px;*/
+  /*left: 5px;*/
+  width: 850px;
+  height: 150px;
+  background: #fff;
+  margin: 3px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: normal;
+  font-size: 20px;
+  /*cursor: pointer;*/
+}
+.form-btn{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  left: 300px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 5px;
+  border: none;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
