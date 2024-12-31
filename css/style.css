@@ -163,7 +163,7 @@ body::-webkit-scrollbar{
   position: relative;
   top: 5px;
   width: 100%;
-  height: 600px;
+  height: fit-content;
   /*display: flex;*/
   /*justify-content: center;*/
   /*align-items: center;*/
@@ -179,15 +179,20 @@ body::-webkit-scrollbar{
   position: relative;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  height: fit-content;
 }
 /*landing page title here*/
 .logo-title{
   position: relative;
-  top: 100px;
+  top: 75px;
   left: 30px;
   display: flex;
   flex-direction: column;
   color: #000;
+  /*background: #1f272d;*/
+  margin-bottom: 150px;
+  height: fit-content;
 }
 .logo-title .capital{
   color: #000;
@@ -278,6 +283,7 @@ body::-webkit-scrollbar{
   /*z-index: 1000;*/
   border-radius: 72% 28% 54% 46% / 80% 54% 46% 20%  ;
   overflow: hidden;
+  margin-bottom: 150px;
   box-shadow: 0 10px 10px  rgba(0,0,0,0.2);
 }
 .main-img{
@@ -346,7 +352,7 @@ body::-webkit-scrollbar{
 .custom-shape-divider-top-1735303245 svg {
   position: relative;
   display: block;
-  width: calc(229% + 1.3px);
+  width: calc(250% + 1.3px);
   height: 580px;
   transform: rotateY(180deg);
 }
@@ -938,7 +944,7 @@ h6{
   /*justify-content: center;*/
   /*align-items: center;*/
   width: 100%;
-  background: #000000;
+  /*background: #000000;*/
   padding: 10px;
 }
 /*.addres{*/
@@ -1046,7 +1052,7 @@ h6{
   overflow: hidden;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 .location{
   position: relative;
@@ -1061,6 +1067,8 @@ h6{
   border-radius: 20px;
   background: #000000;
   overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 .message{
   position: relative;
@@ -1073,9 +1081,9 @@ h6{
   /*left: 5px;*/
   width: 870px;
   height: 500px;
-  background: #000000;
+  background: #ffffff;
   margin: 12px;
-  border-radius: 10px;
+  border-radius: 20px;
   /*overflow: hidden;*/
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1088,7 +1096,7 @@ h6{
   text-align: center;
   font-weight: bold;
   font-size: 25px;
-  color: #ffffff;
+  color: #000000;
 }
 .form{
   position: relative;
@@ -1121,18 +1129,20 @@ h6{
   width: 420px;
   height: 60px;
   background: #ffffff;
-  color: #000000;
+  /*color: #000000;*/
   font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
   /*margin-top: 10px;*/
   margin: 2px;
   /*margin-bottom: 15px;*/
-  border: none;
+  border: 1px solid #000000;
+  padding-left: 7px;
+  /*outline: none;*/
   /*overflow: hidden;*/
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  /*box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);*/
+  /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+  /*cursor: pointer;*/
 }
 .form-message{
   position: relative;
@@ -1148,10 +1158,12 @@ h6{
   margin: 3px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #000000;
+  /*box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);*/
+  /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
   font-weight: normal;
   font-size: 20px;
+  padding-left: 7px;
   /*cursor: pointer;*/
 }
 .form-btn{
@@ -1163,8 +1175,8 @@ h6{
   width: 200px;
   height: 60px;
   left: 300px;
-  background: #ffffff;
-  color: #000000;
+  background: #000000;
+  color: #ffffff;
   font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
