@@ -1011,8 +1011,8 @@ h6{
   font-weight: normal;
 }
 .feedback-icon{
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: #4959b9;
   text-align: center;
@@ -1023,6 +1023,122 @@ h6{
   letter-spacing: 1px;
   align-items: center;
 }
+.feedback-img{
+  position: relative;
+  top: 5px;
+  /*left: 5px;*/
+  width: 100%;
+  height: 500px;
+  /*background: #ffffff;*/
+  margin-left: 19px;
+  margin-right: 19px;
+  margin-bottom: 19px;
+  border-radius: 10px;
+  overflow: hidden;
+  /*box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);*/
+  /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+  cursor: pointer;
+}
+/*gallery style code */
+/* Basic Reset */
+/** {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+/*body {*/
+/*  font-family: Arial, sans-serif;*/
+/*  background-color: #f4f4f4;*/
+/*  text-align: center;*/
+/*}*/
+
+/* Feedback Image Container */
+.container {
+  max-width: 100%; /* Full width */
+  height: 500px; /* Fixed height for container */
+  display: flex; /* Display images side by side */
+  justify-content: flex-start; /* Align to start of container */
+  align-items: center;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  position: relative;
+  margin-left: 35px;
+  margin-right: 20px;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Individual Image Card */
+.feedback-img-card {
+  /*border: 2px solid #ddd;*/
+  border-radius: 8px;
+  overflow: hidden;
+  width: 250px; /* Fixed width for thumbnail */
+  height: 300px; /* Fixed height for thumbnail */
+  margin: 0 20px; /* Space between images */
+  flex-shrink: 0; /* Prevent resizing */
+  /*background-color: #f9f9f9;*/
+}
+
+/* Image Style for Thumbnail */
+.image {
+  width: 100%; /* Fill card width */
+  height: 100%; /* Fill card height */
+  object-fit: cover; /* Maintain aspect ratio and cover thumbnail */
+}
+
+/* Arrows for Navigation */
+.arrows {
+  position: absolute;
+  top: 45%;
+  width: 100.5%;
+  height: fit-content;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-10%);
+  pointer-events: all; /* Disable interaction with the arrow container */
+}
+.left-arrow, .right-arrow {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  /*padding: 10px;*/
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s;
+  margin: 10px;
+  pointer-events: all; /* Enable interaction with the arrows */
+}
+
+.left-arrow:hover, .right-arrow:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Swipe Points */
+.swipe-points {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.swipe-points div {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swipe-points div.active {
+  background-color: #333;
+}
+
 /*contact code style here*/
 /*#contact{*/
 /*  position: relative;*/

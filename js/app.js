@@ -115,3 +115,67 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(image);
 });
 
+// image slider code
+// Select all image cards and navigation buttons
+const imageCards = document.querySelectorAll('.feedback-img-card');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+const swipePointsContainer = document.querySelector('.swipe-points');
+
+let currentIndex = 0;
+const totalImages = imageCards.length;
+const feedbackImg = document.querySelector('.container');
+
+// Function to show the current image based on the index
+function showImage(index) {
+  // Scroll to the corresponding thumbnail
+  const offset = index * (imageCards[0].offsetWidth + 10); // 10 is the margin between the images
+  feedbackImg.scrollTo({ left: offset, behavior: 'smooth' });
+
+  // Update swipe points
+  updateSwipePoints(index);
+}
+
+// Function to update swipe points
+function updateSwipePoints(index) {
+  // Clear existing points
+  swipePointsContainer.innerHTML = '';
+
+  // Create new points
+  for (let i = 0; i < totalImages; i++) {
+    const point = document.createElement('div');
+    point.classList.add('swipe-point');
+    if (i === index) {
+      point.classList.add('active');
+    }
+    swipePointsContainer.appendChild(point);
+  }
+}
+
+// Function to move to the next image
+function nextImage() {
+  currentIndex = (currentIndex + 1) % totalImages; // Loop back to the first image
+  showImage(currentIndex);
+}
+
+// Function to move to the previous image
+function previousImage() {
+  currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Loop back to the last image
+  showImage(currentIndex);
+}
+
+// Event listeners for arrow buttons
+leftArrow.addEventListener('click', previousImage);
+rightArrow.addEventListener('click', nextImage);
+
+// Automatic scrolling function
+function autoScroll() {
+  nextImage();
+}
+
+// Start automatic scrolling every 3 seconds (adjust as needed)
+let autoScrollInterval = setInterval(autoScroll, 3000);
+
+// Show the first image on page load
+showImage(currentIndex);
+
