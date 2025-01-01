@@ -179,3 +179,19 @@ let autoScrollInterval = setInterval(autoScroll, 3000);
 // Show the first image on page load
 showImage(currentIndex);
 
+// dropdown code here about feedback text frequently asked questions
+function toggleDropdown(button) {
+  var dropdown = button.nextElementSibling; // Target the specific dropdown content
+  var isShown = dropdown.classList.contains("show");
+
+  // Hide all dropdowns
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  for (var i = 0; i < dropdowns.length; i++) {
+    dropdowns[i].classList.remove("show");
+  }
+
+  // Show the clicked dropdown if it was not already visible
+  if (!isShown) {
+    dropdown.classList.add("show");
+  }
+}
