@@ -195,3 +195,5 @@ function toggleDropdown(button) {
     dropdown.classList.add("show");
   }
 }
+//current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
