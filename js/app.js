@@ -275,3 +275,29 @@ document.addEventListener("DOMContentLoaded", function () {
 //     observer.observe(image);
 //   });
 // });
+// header scroll bar
+document.addEventListener('DOMContentLoaded', () => {
+  let lastScrollY = window.scrollY; // Keep track of the last scroll position
+  const header = document.querySelector('header'); // Select the header
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+      // Scrolling down
+      header.classList.add('hidden');
+      header.classList.remove('scrolled-up');
+    } else {
+      // Scrolling up
+      header.classList.remove('hidden');
+      header.classList.add('scrolled-up');
+    }
+
+    if (currentScrollY === 0) {
+      // Back at the top
+      header.classList.remove('scrolled-up');
+    }
+
+    lastScrollY = currentScrollY; // Update the last scroll position
+  });
+});
