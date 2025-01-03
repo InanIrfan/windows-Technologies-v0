@@ -1,3 +1,4 @@
+// nav bar
 let sections = document.querySelectorAll('.text');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -130,7 +131,7 @@ const feedbackImg = document.querySelector('.container');
 function showImage(index) {
   // Scroll to the corresponding thumbnail
   const offset = index * (imageCards[0].offsetWidth + 10); // 10 is the margin between the images
-  feedbackImg.scrollTo({ left: offset, behavior: 'smooth' });
+  feedbackImg.scrollTo({left: offset, behavior: 'smooth'});
 
   // Update swipe points
   updateSwipePoints(index);
@@ -195,5 +196,82 @@ function toggleDropdown(button) {
     dropdown.classList.add("show");
   }
 }
+
 //current year
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+// slide effect of the pages
+// slide effect of the pages
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollElements = document.querySelectorAll(".scroll-effect");
+
+  const elementInView = (el, offset = 150) => {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) - offset &&
+      rect.bottom >= 0
+    );
+  };
+
+  const displayScrollElement = (element) => {
+    element.classList.add("visible");
+  };
+
+  const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+      if (elementInView(el, 150)) {
+        displayScrollElement(el);
+      }
+    });
+  };
+
+  window.addEventListener("scroll", handleScrollAnimation);
+  handleScrollAnimation(); // Initial check for items already in view
+
+  // Save scroll position before the page unloads
+  window.addEventListener("beforeunload", function () {
+    sessionStorage.setItem("scrollPosition", window.scrollY);
+  });
+
+  // Restore scroll position after load, accounting for any fixed headers
+  window.addEventListener("load", function () {
+    // Add a small delay to allow the layout to fully settle
+    setTimeout(function () {
+      const scrollPosition = sessionStorage.getItem("scrollPosition");
+      const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
+
+      if (scrollPosition) {
+        // Apply scroll position and subtract the header height
+        window.scrollTo(0, parseInt(scrollPosition) - headerHeight);
+      } else {
+        // If no scroll position is saved, scroll to the top
+        window.scrollTo(0, 0);
+      }
+    }, 100); // Small delay to allow layout to finish
+  });
+});
+//image slide effects
+// document.addEventListener("DOMContentLoaded", () => {
+//   // Select all images with the class 'image'
+//   const images = document.querySelectorAll("img.image"); // Select all <img> elements with class 'image'
+//
+//   // Function to handle the animation when images come into view
+//   const handleAnimation = (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add("act"); // Add 'act' class to trigger animation
+//       } else {
+//         entry.target.classList.remove("act"); // Remove 'act' class if not in view
+//       }
+//     });
+//   };
+//
+//   // Create an Intersection Observer
+//   const observer = new IntersectionObserver(handleAnimation, {
+//     threshold: 0.1, // Trigger when 10% of the element is visible
+//   });
+//
+//   // Observe each image
+//   images.forEach((image) => {
+//     observer.observe(image);
+//   });
+// });
