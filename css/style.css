@@ -564,22 +564,34 @@ h6{
   text-align: center;
   color: #000000;
 }
-.service{
+/*.service{*/
+/*  position: relative;*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  width: 100%;*/
+/*  height: auto;*/
+/*  padding: 10px;*/
+/*}*/
+.service {
   position: relative;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  gap: 20px;
   width: 100%;
-  height: auto;
-  padding: 10px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 .thumbnail{
   position: relative;
   width: 350px;
-  height: 450px;
+  height: 550px;
   display: flex;
+  flex-direction: column;
+  /*flex-wrap: wrap;*/
   background: #ffffff;
   color: #000000;
   font-size: 20px;
@@ -596,7 +608,7 @@ h6{
 }
 /*services icons */
 .box {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -622,18 +634,62 @@ h6{
   }
 }
 /*thumbnail text style code*/
-.thumb-title{
-  position: relative;
-  /*display: flex;*/
-  /*justify-content: center;*/
-  align-items: center;
-  text-align: center;
-  top: 11px;
-  /*left: 10px;*/
-  width: 250px;
-  height: 50px;
-  color: #000000;
-  font-size: 25px;
+/*.thumb-title{*/
+/*  position: relative;*/
+/*  !*display: flex;*!*/
+/*  !*justify-content: center;*!*/
+/*  align-items: center;*/
+/*  text-align: center;*/
+/*  top: 11px;*/
+/*  !*left: 10px;*!*/
+/*  width: 250px;*/
+/*  height: 50px;*/
+/*  color: #000000;*/
+/*  font-size: 25px;*/
+/*}*/
+.thumb-title {
+  margin-left: 80px;
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 10px; /* Reduced space between title and list */
+}
+
+.serviceul {
+  margin-top: 5px; /* Remove extra space above the list */
+  width: 100%;
+  padding: 0;
+  font-size: 18px;
+  font-weight: normal;
+  list-style: disc; /* Default bullet points for main and nested lists */
+  padding-left: 20px; /* Indentation for points */
+
+}
+.hide{
+  line-height: 18px;
+}
+
+.serviceul li {
+  margin-bottom: 10px; /* Consistent spacing between points */
+  list-style: inherit; /* Ensure nested <li> items inherit bullet styling */
+}
+
+.serviceul li ul {
+  padding-left: 50px; /* Indent for nested lists */
+  margin-top: 0; /* Reduce space above nested lists */
+  list-style-type: disc; /* Ensure nested lists also have bullet points */
+}
+.serviceul .serv-ul{
+  list-style: none;
+}
+.serviceul li ul li {
+  /*margin-bottom: 5px; !* Smaller spacing for nested items *!*/
+  font-size: 16px; /* Slightly smaller font for nested items */
+}
+.serv-ul{
+  list-style: none;
+  /*position: absolute;*/
 }
 .cctv-camera{
   position: relative;
