@@ -257,9 +257,18 @@ body::-webkit-scrollbar{
   background: #e1eaec;
   color: #000000;
 }
-.dark-mode .text {
-  background: white;
-  color: black;
+/*.dark-mode .text {*/
+/*  background: white;*/
+/*  color: black;*/
+/*}*/
+.dark-mode .text:nth-child(odd) {
+  background: #444; /* Darker background for odd-numbered divs */
+  color: white; /* White text for contrast */
+}
+
+.dark-mode .text:nth-child(even) {
+  background: #555; /* Slightly lighter background for even-numbered divs */
+  color: white; /* White text for contrast */
 }
 /*landing home style code */
 #home{
@@ -459,13 +468,24 @@ body::-webkit-scrollbar{
   /*background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);*/
   /*background-image: linear-gradient(to top, #6991c7 2%, #a3bded 100%);*/
 }
-h6{
+h6 {
   text-align: center;
   font-size: 45px;
   font-weight: 600;
-  /*color: #000000;*/
   margin-top: 10px;
+  margin-bottom: 20px; /* Adds space below the heading */
+  border-bottom: 2px solid var(--white); /* Adds a line at the bottom of the heading */
+  width: 65%; /* Shortens the border length */
+  margin-left: auto; /* Centers the border */
+  margin-right: auto; /* Centers the border */
+  padding-bottom: 10px; /* Adds some padding below the text for spacing */
 }
+
+.dark-mode h6 {
+  border-bottom: 2px solid var(--primary); /* Darker line for dark theme */
+  color: white; /* Light color for the heading text in dark mode */
+}
+
 .product{
   position: relative;
   /*top: 5px;*/
