@@ -269,3 +269,28 @@ document.addEventListener('DOMContentLoaded', () => {
     lastScrollY = currentScrollY; // Update the last scroll position
   });
 });
+// privacy terms
+// Display the popup after the page loads
+window.onload = function() {
+  checkPrivacyStatus();
+};
+
+// Function to check and display the popup
+function checkPrivacyStatus() {
+  const hasAccepted = localStorage.getItem('privacyAccepted') === 'true';
+
+  if (hasAccepted) {
+    console.log('User has already accepted the terms.');
+    document.getElementById('privacy-popup').style.display = 'none';
+  } else {
+    console.log('User has not accepted the terms. Displaying the popup.');
+    document.getElementById('privacy-popup').style.display = 'block';
+  }
+}
+
+// Function to handle acceptance
+function acceptPrivacy() {
+  localStorage.setItem('privacyAccepted', 'true');
+  console.log('User accepted the terms.');
+  document.getElementById('privacy-popup').style.display = 'none';
+}

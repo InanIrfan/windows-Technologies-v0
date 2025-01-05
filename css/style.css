@@ -13,6 +13,33 @@ html, body {
 body{
   /*overflow-x: hidden;*/
 }
+#privacy-popup {
+  position: fixed;
+  right: 5px;
+  top: 70%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px 0 0 5px;
+  display: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#privacy-popup button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#privacy-popup button:hover {
+  background-color: #45a049;
+}
 /*Nav Bar Style header code here*/
 header{
   position: fixed;
@@ -1599,6 +1626,21 @@ html {
 .contact-button button:hover{
   background: #4959b9;
 }
+#call{
+  background: #2980B9;
+  color: #FFFFFF;
+}
+#call:hover{
+  background: #4959b9;
+}
+#whatsapp{
+  background: #45a049;
+  color: #FFFFFF;
+}
+#whatsapp:hover{
+  background: #4CAF50;
+  color: #FFFFFF;
+}
 .contact-location{
   position: relative;
   display: flex;
@@ -1647,6 +1689,7 @@ html {
   background: #ffffff;
   margin: 12px;
   border-radius: 20px;
+  color: #000000;
   /*overflow: hidden;*/
   /*box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);*/
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1659,6 +1702,9 @@ html {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
+  color: #000000;
+}
+.dark-mode .form-title{
   color: #000000;
 }
 .form{
@@ -1738,7 +1784,7 @@ html {
   width: 200px;
   height: 60px;
   left: 300px;
-  background: #000000;
+  background: #4070F4;
   color: #ffffff;
   font-size: 20px;
   font-weight: bold;
@@ -1748,6 +1794,10 @@ html {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+}
+.form-btn:hover{
+  background: #4959b9;
+  color: #ffffff;
 }
 /*page bottom code here */
 .text .foot{

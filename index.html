@@ -31,6 +31,11 @@
 <body>
 
   <!-- Add your site or application content here -->
+<!--  privacy terms -->
+  <div id="privacy-popup">
+    <p>By using this site, you accept our <a href="/privacy-policy" style="color: #4CAF50;">Privacy Policy</a>.</p>
+    <button onclick="acceptPrivacy()">I Accept</button>
+  </div>
 <!--  Header section -->
   <header>
     <a href="#" id="a">
@@ -701,8 +706,8 @@
               Sunday: By Appointment.</li>
           </ul>
           <div class="contact-button">
-            <button>Order now</button>
-            <button>Order now</button>
+            <button id="call"><a href="tel:+919866305176" class="phone-number"><i class="bi bi-telephone-outbound-fill"></i>&nbsp;Call us</a></button>
+            <button id="whatsapp"><a class="list" href="https://wa.me/919866305176"><i class="bi bi-whatsapp"></i>&nbsp;Whatsapp</a></button>
           </div>
         </div>
         <div class="contact-location  scroll-effect">
@@ -726,7 +731,7 @@
 
                 <button class="form-btn" type="submit" disabled data-form-btn>
 
-                  <span>Send Message</span>
+                  <i class="bi bi-send-fill"></i>&nbsp;Send Message
                 </button>
 
               </form>
