@@ -294,3 +294,13 @@ function acceptPrivacy() {
   console.log('User accepted the terms.');
   document.getElementById('privacy-popup').style.display = 'none';
 }
+//mobile screen menu code
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+  document.querySelector("header").style.display = "none";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+  document.querySelector("header").style.display = "flex";
+}

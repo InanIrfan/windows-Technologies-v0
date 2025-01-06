@@ -15,8 +15,10 @@ body{
 }
 #privacy-popup {
   position: fixed;
-  right: 5px;
+  right: 10px;
   top: 70%;
+  width: 400px;
+  height: fit-content;
   transform: translateY(-50%);
   background-color: #333;
   color: #fff;
@@ -251,6 +253,91 @@ i {
   font-size: 20px;
   cursor: pointer;
   /* color: white; Default icon color */
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  position: absolute;
+  right: 63px;
+  /*top: 15px;*/
+  cursor: pointer;
+}
+
+/*.name-icon {*/
+/*  font-size: 24px;*/
+/*  margin-right: 10px;*/
+/*}*/
+
+/* Overlay Menu */
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay-content a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay-content a:hover {
+  color: #FFFFFF;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+/* New section for Windows Technologies */
+.technologies-header {
+  color: #818181;
+  font-size: 24px;
+  text-align: left;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.technologies-subheader {
+  color: #818181;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+/* Media Query for Mobile Screens */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .name-icon {
+    display: none;
+  }
 }
 /* main page code here */
 .banner{
