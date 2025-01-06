@@ -114,8 +114,8 @@ setInterval(textLoad, 12000);
 
 //image code here
 var TrandingSlider = new Swiper('.tranding-slider', {
-  slidesPerView: 4, // Display 3 slides at a time
-  spaceBetween: 20, // Space between slides
+  slidesPerView: 4, // Default slides per view
+  spaceBetween: 20, // Default space between slides
   loop: true, // Enable looping through slides
   centeredSlides: true, // Center the active slide
   pagination: {
@@ -126,16 +126,18 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  on: {
-    slideChange: function () {
-      // Add active class to the current slide
-      const slides = document.querySelectorAll('.tranding-slide');
-      slides.forEach(slide => slide.classList.remove('active'));
-      const activeSlide = slides[this.realIndex];
-      activeSlide.classList.add('active');
-    }
+  breakpoints: {
+    // Adjust settings for different screen widths
+    320: { slidesPerView: 2, spaceBetween: 10 }, // Small phones
+    480: { slidesPerView: 3, spaceBetween: 10 }, // Phones
+    540: { slidesPerView: 2, spaceBetween: 10 }, // Phones
+    768: { slidesPerView: 3, spaceBetween: 15 }, // Tablets
+    1024: { slidesPerView: 4, spaceBetween: 20 }, // Laptops
+    1440: { slidesPerView: 4, spaceBetween: 25 }, // Larger screens
+    2560: { slidesPerView: 6, spaceBetween: 30 }, // Ultra-wide screens
   }
 });
+
 
 // dropdown code here about feedback text frequently asked questions
 function toggleDropdown(button) {
@@ -294,6 +296,8 @@ function acceptPrivacy() {
   console.log('User accepted the terms.');
   document.getElementById('privacy-popup').style.display = 'none';
 }
+
+
 //mobile screen menu code
 function openNav() {
   document.getElementById("myNav").style.height = "100%";

@@ -1540,7 +1540,68 @@ html {
   background: var(--primary); /* Active bullet color */
   opacity: 1;
 }
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .tranding-slide {
+    width: 200px;
+    height: 200px;
+  }
 
+  .tranding-slide .tranding-slide-img img {
+    width: 180px;
+    height: 180px;
+  }
+  .tranding-slider-control .swiper-pagination{
+    top: 50px;
+  }
+  .feedback-img {
+    height: 300px; /* Reduce container height */
+  }
+}
+@media screen and (max-width: 1024px){
+  .tranding-slide {
+    width: 250px;
+    height: 250px;
+  }
+
+  .tranding-slide .tranding-slide-img img {
+    width: 200px;
+    height: 200px;
+  }
+  .tranding-slider-control .swiper-pagination{
+    top: 100px;
+  }
+  .tranding-slider-control .slider-arrow {
+    width: 40px;
+    height: 40px;
+    top: 1px;
+  }
+  .feedback-img {
+    height: 350px; /* Reduce container height */
+  }
+}
+@media (max-width: 480px) {
+  .tranding-slide {
+    width: 130px;
+    height: 130px;
+  }
+
+  .tranding-slide .tranding-slide-img img {
+    width: 130px;
+    height: 130px;
+  }
+  .tranding-slider-control .swiper-pagination{
+    top: 60px;
+  }
+  .tranding-slider-control .slider-arrow {
+    width: 20px;
+    height: 20px;
+    top: 1px;
+  }
+  .feedback-img {
+    height: 250px; /* Reduce container height */
+  }
+}
 /*feedback style here*/
 .feedback-text {
   width: 100%;
