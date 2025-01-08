@@ -95,19 +95,39 @@ function applyLightMode() {
 }
 
 // names services
+// const text = document.querySelector(".sec-text");
+//
+// const textLoad = () => {
+//   setTimeout(() => {
+//     text.textContent = "Mobiles Repairs";
+//   }, 0);
+//   setTimeout(() => {
+//     text.textContent = "Cpu Repairs";
+//   }, 4000);
+//   setTimeout(() => {
+//     text.textContent = "CCTV Cameras Installation";
+//   }, 8000); //1s = 1000 milliseconds
+// }
+//
+// textLoad();
+// setInterval(textLoad, 12000);
+
 const text = document.querySelector(".sec-text");
 
 const textLoad = () => {
   setTimeout(() => {
-    text.textContent = "Mobiles Repairs";
+    text.textContent = "Mobile Repairs";
+    text.classList.add("highlight");
   }, 0);
   setTimeout(() => {
-    text.textContent = "Cpu Repairs";
+    text.textContent = "CPU Repairs";
+    text.classList.add("highlight");
   }, 4000);
   setTimeout(() => {
     text.textContent = "CCTV Cameras Installation";
-  }, 8000); //1s = 1000 milliseconds
-}
+    text.classList.add("highlight");
+  }, 8000);
+};
 
 textLoad();
 setInterval(textLoad, 12000);
