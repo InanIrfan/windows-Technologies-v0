@@ -1365,7 +1365,6 @@ h6 {
 /* Responsive Design Enhancements */
 @media (max-width: 1200px) {
   .thumbnail,
-  .cctv-camera-thumb,
   .security-card {
     width: 300px;
     height: auto; /* Adjust height for better flexibility */
@@ -1376,33 +1375,26 @@ h6 {
   .serviceul li {
     font-size: 16px;
   }
-  .card-button,
-  .security-card-button {
-    width: 200px;
-    height: 40px;
-    font-size: 18px;
-  }
+  /*.card-button,*/
+  /*.security-card-button {*/
+  /*  width: 200px;*/
+  /*  height: 40px;*/
+  /*  font-size: 18px;*/
+  /*}*/
 }
 
 @media (max-width: 768px) {
-  .service,
-  .cctv-camera,
-  .security {
-    flex-direction: column; /* Stack elements vertically */
+  .service{
+    flex-direction: row; /* Stack elements vertically */
     align-items: center;
   }
-  .thumbnail,
-  .cctv-camera-thumb,
-  .security-card {
-    width: 100%;
+  .thumbnail{
+    width: 300px;
+    height: 570px;
     margin: 10px 0; /* Adjust spacing for stacked layout */
   }
-  .thumb-title,
-  .security-card-title {
+  .thumb-title{
     font-size: 20px;
-  }
-  .card-text li {
-    font-size: 16px;
   }
 }
 
@@ -1412,49 +1404,23 @@ h6 {
     height: 40px;
     font-size: 14px;
   }
-  .thumb-title,
-  .security-card-title {
+  .thumb-title{
     font-size: 18px;
   }
-  .card-button,
-  .security-card-button {
-    width: 150px;
-    height: 40px;
-    font-size: 16px;
-  }
-  .security-card-img,
-  #secure {
-    width: 200px;
-    height: 180px;
-  }
-  .serviceul li,
-  .card-text li {
+  .serviceul li{
     font-size: 14px;
-  }
-  .tag-text {
-    font-size: 12px;
   }
 }
 
-@media (max-width: 400px) {
-  .card-button,
-  .security-card-button {
-    width: 120px;
-    height: 35px;
-    font-size: 14px;
+@media (max-width: 480px) {
+  .thumbnail{
+    height: fit-content;
   }
-  .thumb-title,
-  .security-card-title {
+  .thumb-title{
     font-size: 16px;
   }
-  .serviceul li,
-  .card-text li {
+  .serviceul li {
     font-size: 12px;
-  }
-  .security-card-img,
-  #secure {
-    width: 180px;
-    height: 150px;
   }
 }
 /*about code style here */
