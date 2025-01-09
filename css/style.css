@@ -339,6 +339,29 @@ i {
     display: none;
   }
 }
+@media screen and (max-width: 375px) {
+  header{
+    width: 100%;
+  }
+  .scrolled-up {
+    margin-left: -10px;
+    border-radius: 20px;
+    width: 80%; /* Set width to 80% when scrolling up */
+    left: 10%; /* Center the header horizontally */
+  }
+  .scrolled-up .navbar ul {
+    right: 20px;
+  }
+  /*.hamburger{*/
+  /*  right: 87px;*/
+  /*}*/
+  /*#theme {*/
+  /*  right: 40px;*/
+  /*}*/
+  body{
+    overflow-x: hidden;
+  }
+}
 /* main page code here */
 .banner{
   position: relative;
@@ -751,8 +774,8 @@ body::-webkit-scrollbar{
 /*  margin-bottom: 20px; !* Adds space below the heading *!*/
 /*  border-bottom: 2px solid var(--white); !* Adds a line at the bottom of the heading *!*/
 /*  width: 65%; !* Shortens the border length *!*/
-/*  margin-left: auto; !* Centers the border *!*/
-/*  margin-right: auto; !* Centers the border *!*/
+/*  !*margin-left: auto; !* Centers the border *!*!*/
+/*  !*margin-right: auto; !* Centers the border *!*!*/
 /*  padding-bottom: 10px; !* Adds some padding below the text for spacing *!*/
 /*}*/
 
@@ -887,16 +910,16 @@ body::-webkit-scrollbar{
   background-color: #f5f5f5; /* Light background for the section */
 }
 
-h6 {
-  text-align: center;
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  border-bottom: 2px solid #333;
-  width: fit-content;
-  margin: 0 auto; /* Centers the heading */
-  padding-bottom: 10px;
-}
+/*h6 {*/
+/*  text-align: center;*/
+/*  font-size: 36px;*/
+/*  font-weight: bold;*/
+/*  margin-bottom: 40px;*/
+/*  border-bottom: 2px solid #333;*/
+/*  width: fit-content;*/
+/*  margin: 0 auto; !* Centers the heading *!*/
+/*  padding-bottom: 10px;*/
+/*}*/
 
 /* Product Container */
 /* Section Styles */
@@ -914,14 +937,18 @@ h6 {
   font-size: 45px;
   font-weight: 600;
   margin-bottom: 10px; /* Reduced margin-bottom */
-  color: #fff;
+  color: #000;
   border-bottom: 2px solid #fff;
   padding-bottom: 10px;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
 }
-
+@media (max-width: 480px) {
+  h6{
+    font-size: 29px;
+  }
+}
 .product {
   display: flex;
   flex-wrap: wrap;
@@ -1447,8 +1474,12 @@ h6 {
     font-size: 16px;
   }
   .serviceul li {
+    font-size: 16px;
+  }
+  .serviceul .sub-ul li{
     font-size: 14px;
   }
+
 }
 /*about code style here */
 #about{
@@ -2812,13 +2843,13 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     /*align-items: center;*/
-    width: 350px;
+    width: 220px;
     height: 320px;
     top: 0;
     /*bottom: 0;*/
     /*background: #4959b9;*/
     /*color: #000000;*/
-    font-size: 18px;
+    font-size: 15px;
     font-weight: normal;
     text-align: justify;
     padding: 5px;
@@ -2947,6 +2978,32 @@ html {
     font-size: 16px;
 
   }
+    .footer-copyright_bottom{
+      width: 800px;
+      /*background: #FFFFFF;*/
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+@media screen and (max-width: 1024px){
+  .footer-copyright{
+    width: 190px;
+    /*height: fit-content;*/
+  }
+  .footer-copyright_bottom{
+    width: 990px;
+    /*background: #FFFFFF;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .list{
+    font-size: 18px;
+  }
+  #page-contact li{
+    text-align: left;
+  }
+}
   @media (max-width: 768px) {
     #page-bottom {
       flex-direction: column;
@@ -3008,6 +3065,14 @@ html {
   }
   #page-contact {
     width: 370px;
+  }
+}
+@media (max-width: 375px) {
+  #copyrights {
+    width: 280px;
+  }
+  #page-contact {
+    width: 280px;
   }
 }
 /* Add this to your CSS file */
