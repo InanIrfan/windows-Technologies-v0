@@ -305,6 +305,8 @@ i {
   right: 45px;
   font-size: 60px;
   cursor: pointer;
+  color: #f3f6f8 !important;
+  opacity: 1;
 }
 
 /* New section for Windows Technologies */
@@ -1159,6 +1161,9 @@ h6 {
   list-style: none;
   /*position: absolute;*/
 }
+.icon-color{
+  color: #4070F4;
+}
 .cctv-camera{
   position: relative;
   display: flex;
@@ -1442,7 +1447,7 @@ h6 {
     font-size: 16px;
   }
   .serviceul li {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 /*about code style here */
@@ -2930,6 +2935,7 @@ html {
   .footer-copyright1 p {
     font-size: 16px;
     font-weight: normal;
+    color: #FFFFFF;
     text-align: center;
 
   }
@@ -2941,8 +2947,70 @@ html {
     font-size: 16px;
 
   }
-
-  /* Add this to your CSS file */
+  @media (max-width: 768px) {
+    #page-bottom {
+      flex-direction: column;
+      width: 100%;
+      flex-wrap: wrap;
+      /*align-items: flex-start;*/
+    }
+    #copyrights {
+      display: flex;
+      flex-direction: column;
+      /*width: 350px;*/
+    }
+    .footer-copyright_bottom{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-copyright{
+      height: fit-content;
+      width: 270px;
+    }
+  }
+@media (max-width: 480px) {
+  #page-bottom {
+    flex-direction: column;
+    /*width: 100%;*/
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  #copyrights {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+  .footer-copyright_bottom{
+    display: block;
+    /*flex-direction: column;*/
+    /*width: 100%;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+  }
+  .footer-copyright{
+    height: fit-content;
+    /*width: 270px;*/
+    align-items: flex-start;
+    /*background: #FFFFFF;*/
+  }
+  #page-contact {
+    width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  #copyrights {
+    width: 370px;
+  }
+  #page-contact {
+    width: 370px;
+  }
+}
+/* Add this to your CSS file */
   .scroll-effect {
     opacity: 0;
     transform: translateY(100px); /* Start below */
