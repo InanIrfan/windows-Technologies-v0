@@ -29,6 +29,7 @@ window.onscroll = () => {
 };
 
 //Light and Dark Theme.
+// Light and Dark Theme.
 const toggle = document.getElementById('toggleDark');
 const textDivs = document.querySelectorAll('.text');
 const header = document.querySelector('header');
@@ -51,7 +52,6 @@ toggle.addEventListener('click', function () {
 });
 
 // Function to apply dark mode
-// Function to apply dark mode
 function applyDarkMode() {
   document.body.classList.add('dark-mode');
   document.body.classList.remove('light-mode');
@@ -62,9 +62,11 @@ function applyDarkMode() {
   toggle.style.color = 'yellow'; // Sun icon color in dark mode
 
   // Update each .text div for dark mode
-  textDivs.forEach((div) => {
-    div.style.background = 'black'; // Set background color to white
-    div.style.color = 'white'; // Set text color to black
+  textDivs.forEach((div, index) => {
+    if (index !== 0) { // Skip the first div (the one with the image)
+      div.style.color = 'white'; // Set text color to white for dark mode
+      div.style.background = 'black'; // Set background color to black for dark mode
+    }
   });
 
   localStorage.setItem('theme', 'dark'); // Save theme preference
@@ -82,12 +84,13 @@ function applyLightMode() {
 
   // Update each .text div for light mode
   textDivs.forEach((div, index) => {
-    if (index % 2 === 0) {
-      div.style.background = '#adc7e3';
-      div.style.color = 'black'; // Restore light mode text color
-    } else {
-      div.style.background = '#e1eaec';
-      div.style.color = '#000000'; // Restore light mode text color
+    if (index !== 0) { // Skip the first div (the one with the image)
+      if (index % 2 === 0) {
+        div.style.background = '#adc7e3'; // Set background for even divs
+      } else {
+        div.style.background = '#e1eaec'; // Set background for odd divs
+      }
+      div.style.color = 'black'; // Set text color to black for light mode
     }
   });
 
