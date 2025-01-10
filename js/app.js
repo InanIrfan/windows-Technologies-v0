@@ -296,30 +296,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // privacy terms
 // Display the popup after the page loads
-window.onload = function() {
-  checkPrivacyStatus();
+// Display the popup after the page loads
+window.onload = function () {
+  setTimeout(function () {
+    const popup = document.getElementById('privacy-popup');
+    if (!localStorage.getItem('privacyAccepted')) {
+      popup.style.display = 'block';
+    }
+  }, 1000);
 };
 
-// Function to check and display the popup
-function checkPrivacyStatus() {
-  const hasAccepted = localStorage.getItem('privacyAccepted') === 'true';
-
-  if (hasAccepted) {
-    console.log('User has already accepted the terms.');
-    document.getElementById('privacy-popup').style.display = 'none';
-  } else {
-    console.log('User has not accepted the terms. Displaying the popup.');
-    document.getElementById('privacy-popup').style.display = 'block';
-  }
-}
-
-// Function to handle acceptance
-function acceptPrivacy() {
-  localStorage.setItem('privacyAccepted', 'true');
-  console.log('User accepted the terms.');
+// Close the popup
+function closePopup() {
   document.getElementById('privacy-popup').style.display = 'none';
 }
 
+// Accept the privacy policy
+function acceptPrivacy() {
+  localStorage.setItem('privacyAccepted', 'true');
+  closePopup();
+}
+
+// Decline the privacy policy
+function declinePrivacy() {
+  alert('You must accept the privacy terms to continue using this site.');
+}
 
 //mobile screen menu code
 function openNav() {
@@ -331,3 +332,22 @@ function closeNav() {
   document.getElementById("myNav").style.height = "0%";
   document.querySelector("header").style.display = "flex";
 }
+
+//for the right side buttons at edge of the page
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollButtons = document.getElementById('scrollButtons');
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', () => {
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Show buttons when scrolling up and not on the top of the page
+    if (st < lastScrollTop && st > 100) {
+      scrollButtons.style.display = 'flex';
+    } else {
+      scrollButtons.style.display = 'none';
+    }
+
+    lastScrollTop = st <= 0 ? 0 : st; // Ensure non-negative scroll position
+  });
+});

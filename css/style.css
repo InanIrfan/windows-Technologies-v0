@@ -13,33 +13,116 @@ body {
 }
 #privacy-popup {
   position: fixed;
-  right: 10px;
-  top: 70%;
+  background-color: white;
+  color: black;
   width: 400px;
   height: fit-content;
-  transform: translateY(-50%);
-  background-color: #333;
-  color: #fff;
   padding: 20px;
-  border-radius: 5px 0 0 5px;
-  display: none;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  display: none;
+}
+
+#privacy-popup p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 #privacy-popup button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
+  background-color: #edf2f2;
+  color: black;
+  border: 1px solid #ccc;
   padding: 10px 15px;
   text-align: center;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
 }
 
 #privacy-popup button:hover {
-  background-color: #45a049;
+  background-color: rgba(200, 200, 200, 0.9);
 }
+
+#privacy-popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#privacy-popup .close-btn:hover {
+  background-color: rgba(200, 200, 200, 0.9);
+}
+
+@media (max-width: 768px) {
+  #privacy-popup {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Adjust for smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  #privacy-popup {
+    left: 10px;
+    bottom: 20px;
+    transform: translateY(0);
+  }
+}
+/*buttons for top reach home and to chat whatsapp at right edge bottom*/
+#scrollButtons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #25d366;
+  color: #FFFFFF;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+#homeButton {
+  background-color: #4070F4;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
+}
+
+#whatsappButton i {
+  width: 30px;
+  height: 30px;
+  color: #FFFFFF;
+}
+
 /*Nav Bar Style header code here*/
 header{
   position: fixed;
@@ -80,7 +163,7 @@ header{
   margin: 20px;
   border-radius: 20px;
   width: 80%; /* Set width to 80% when scrolling up */
-  left: 10%; /* Center the header horizontally */
+  left: 8%; /* Center the header horizontally */
 }
 .scrolled-up .navbar ul {
   right: 20px;
@@ -2464,8 +2547,8 @@ html {
   width: 300px;
   height: 50px;
   text-align: center;
-  background: #000000;
-  color: #ffffff;
+  /*background: #000000;*/
+  /*color: #ffffff;*/
   font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
@@ -2478,19 +2561,21 @@ html {
 }
 .contact-button button:hover{
   background: #4959b9;
+  color: white;
 }
 #call{
   background: #2980B9;
   color: #FFFFFF !important;
 }
-#call:hover{
+#call a:hover{
   background: #4959b9;
+  color: white;
 }
 #whatsapp{
   background: #45a049;
   color: #FFFFFF !important;
 }
-#whatsapp:hover{
+#whatsapp a:hover{
   background: #4CAF50;
   color: #FFFFFF;
 }
@@ -2692,21 +2777,7 @@ html {
   /*  height: 50px;*/
   /*  left: 325px;*/
   /*}*/
-  #call{
-    background: #2980B9;
-    color: #FFFFFF;
-  }
-  #call:hover{
-    background: #4959b9;
-  }
-  #whatsapp{
-    background: #45a049;
-    color: #FFFFFF;
-  }
-  #whatsapp:hover{
-    background: #4CAF50;
-    color: #FFFFFF;
-  }
+
 }
 @media (max-width: 1024px) {
   .contact-adders {
@@ -2724,8 +2795,8 @@ html {
   }
 
   .contact-adders button {
-    top: 60px;
-    width: 170px;
+    top: 110px;
+    width: 160px;
     height: 40px;
     color: #ffffff;
   }
@@ -2736,7 +2807,6 @@ html {
   }
 
   .location {
-    /*width: 99%;*/
     height: 450px;
   }
 
@@ -2754,26 +2824,6 @@ html {
     width: 200px;
     height: 50px;
     left: 175px;
-    /*}*/
-
-    #call {
-      background: #2980B9;
-      color: #FFFFFF;
-    }
-
-    #call:hover {
-      background: #4959b9;
-    }
-
-    #whatsapp {
-      background: #45a049;
-      color: #FFFFFF;
-    }
-
-    #whatsapp:hover {
-      background: #4CAF50;
-      color: #FFFFFF;
-    }
   }
 }
 
@@ -2819,25 +2869,6 @@ html {
       width: 200px;
       height: 50px;
       left: 150px;
-    }
-
-    #call {
-      background: #2980B9;
-      color: #FFFFFF;
-    }
-
-    #call:hover {
-      background: #4959b9;
-    }
-
-    #whatsapp {
-      background: #45a049;
-      color: #FFFFFF;
-    }
-
-    #whatsapp:hover {
-      background: #4CAF50;
-      color: #FFFFFF;
     }
   }
 @media (max-width: 610px) {
@@ -2895,25 +2926,6 @@ html {
     width: 200px;
     height: 50px;
     left: 80px;
-  }
-
-  #call {
-    background: #2980B9;
-    color: #FFFFFF;
-  }
-
-  #call:hover {
-    background: #4959b9;
-  }
-
-  #whatsapp {
-    background: #45a049;
-    color: #FFFFFF;
-  }
-
-  #whatsapp:hover {
-    background: #4CAF50;
-    color: #FFFFFF;
   }
 }
 @media screen and (max-width: 600px) {
@@ -2982,25 +2994,6 @@ html {
       width: 200px;
       height: 50px;
       left: 70px;
-    }
-
-    #call {
-      background: #2980B9;
-      color: #FFFFFF;
-    }
-
-    #call:hover {
-      background: #4959b9;
-    }
-
-    #whatsapp {
-      background: #45a049;
-      color: #FFFFFF;
-    }
-
-    #whatsapp:hover {
-      background: #4CAF50;
-      color: #FFFFFF;
     }
   }
   @media (max-width: 400px) {
@@ -3493,7 +3486,7 @@ html {
     width: 280px;
   }
 }
-/* Add this to your CSS file */
+/* Add this is scroll effect of screens CSS */
   .scroll-effect {
     opacity: 0;
     transform: translateY(100px); /* Start below */
