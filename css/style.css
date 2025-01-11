@@ -1107,11 +1107,18 @@ h6 {
 .cctv-title {
   background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
 }
-
+.printer-title {
+  background: linear-gradient(135deg, #6a85b6, #bac8e0);
+}
+.film-cutting-title {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
 .desktop-img,
 .laptop-img,
 .mobile-img,
-.cctv-img {
+.cctv-img,
+.printer-img,
+.film-cutting-img{
   width: 300px; /* Reduced width */
   height: 300px; /* Reduced height */
   object-fit: contain;
@@ -1123,7 +1130,9 @@ h6 {
 .desktop-text,
 .laptop-text,
 .mobile-text,
-.cctv-text {
+.cctv-text,
+.printer-text,
+.film-cutting-text{
   flex: 1 1 50%;
   max-width: 600px;
   font-size: 18px;
@@ -1136,7 +1145,9 @@ h6 {
 .desktop-text h3,
 .laptop-text h3,
 .mobile-text h3,
-.cctv-text h3 {
+.cctv-text h3,
+.printer-text h3,
+.film-cutting-text h3{
   font-size: 22px; /* Reduced font-size */
   font-weight: bold;
   margin-bottom: 5px; /* Reduced margin-bottom */
@@ -1162,7 +1173,8 @@ h6 {
   .desktop-img,
   .laptop-img,
   .mobile-img,
-  .cctv-img {
+  .cctv-img,
+  .printer-img{
     width: 150px; /* Reduced width */
     height: 150px; /* Reduced height */
   }
@@ -1170,7 +1182,8 @@ h6 {
   .desktop-text,
   .laptop-text,
   .mobile-text,
-  .cctv-text {
+  .cctv-text,
+  .printer-text{
     max-width: 100%;
     text-align: center;
     margin-top: 10px; /* Reduced margin-top */
