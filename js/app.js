@@ -28,7 +28,6 @@ window.onscroll = () => {
   });
 };
 
-//Light and Dark Theme.
 // Light and Dark Theme.
 const toggle = document.getElementById('toggleDark');
 const textDivs = document.querySelectorAll('.text');
@@ -98,22 +97,6 @@ function applyLightMode() {
 }
 
 // names services
-// const text = document.querySelector(".sec-text");
-//
-// const textLoad = () => {
-//   setTimeout(() => {
-//     text.textContent = "Mobiles Repairs";
-//   }, 0);
-//   setTimeout(() => {
-//     text.textContent = "Cpu Repairs";
-//   }, 4000);
-//   setTimeout(() => {
-//     text.textContent = "CCTV Cameras Installation";
-//   }, 8000); //1s = 1000 milliseconds
-// }
-//
-// textLoad();
-// setInterval(textLoad, 12000);
 
 const text = document.querySelector(".sec-text");
 
@@ -182,7 +165,6 @@ function toggleDropdown(button) {
 //current year
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 // slide effect of the pages
-// slide effect of the pages
 document.addEventListener("DOMContentLoaded", function () {
   const scrollElements = document.querySelectorAll(".scroll-effect");
 
@@ -242,32 +224,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//image slide effects
-// document.addEventListener("DOMContentLoaded", () => {
-//   // Select all images with the class 'image'
-//   const images = document.querySelectorAll("img.image"); // Select all <img> elements with class 'image'
-//
-//   // Function to handle the animation when images come into view
-//   const handleAnimation = (entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         entry.target.classList.add("act"); // Add 'act' class to trigger animation
-//       } else {
-//         entry.target.classList.remove("act"); // Remove 'act' class if not in view
-//       }
-//     });
-//   };
-//
-//   // Create an Intersection Observer
-//   const observer = new IntersectionObserver(handleAnimation, {
-//     threshold: 0.1, // Trigger when 10% of the element is visible
-//   });
-//
-//   // Observe each image
-//   images.forEach((image) => {
-//     observer.observe(image);
-//   });
-// });
 // header scroll bar
 document.addEventListener('DOMContentLoaded', () => {
   let lastScrollY = window.scrollY; // Keep track of the last scroll position
@@ -295,7 +251,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 // privacy terms
-// Display the popup after the page loads
 // Display the popup after the page loads
 window.onload = function () {
   setTimeout(function () {
