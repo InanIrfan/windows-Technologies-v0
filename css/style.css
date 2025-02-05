@@ -804,7 +804,7 @@ h6 {
   cursor: pointer;
 }
 .thumbnail:hover{
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
 }
 /*services icons */
 .box {
@@ -845,7 +845,7 @@ h6 {
 .serviceul {
   margin-top: 5px; /* Remove extra space above the list */
   width: 100%;
-  padding: 0;
+  /*padding: 0;*/
   font-size: 18px;
   font-weight: normal;
   list-style: disc; /* Default bullet points for main and nested lists */
@@ -905,7 +905,7 @@ h6 {
   cursor: pointer;
 }
 .cctv-camera-thumb:hover{
-  transform: translateY(-10px);
+  transform: translateY(-10px) !important;
 }
 .cctv-camera-tag {
   position: absolute;
@@ -1072,7 +1072,7 @@ h6 {
   cursor: pointer;
 }
 .security-card:hover{
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
   margin: 13px;
 }
 .security-card-img{
